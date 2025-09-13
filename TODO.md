@@ -1,0 +1,10 @@
+- [ ] Fix config/db.js: Properly instantiate and export PrismaClient
+- [ ] Fix controllers/authController.js: Import prisma, fix getAllUsers method
+- [ ] Fix controllers/messageController.js: Import prisma, fix field names, user id access, export syntax
+- [ ] Fix controllers/userController.js: Import prisma from correct path
+- [ ] Fix middleware/handleValidationError.js: Fix validationResult import
+- [ ] Fix middleware/authValidator.js: Rename exports to match routes
+- [ ] Fix prisma/schema.prisma: Correct isVarified to isVerified
+- [ ] Mount routes in server.js
+- [ ] Run prisma migrate dev to apply schema changes
+- [ ] Test the app

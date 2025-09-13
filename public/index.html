@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat Room</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <nav class="nav">
+        <h1>ChattyTalk</h1>
+        <li><a href="./login.html">login</a></li>
+        <li><a href="./signup.html">signup</a></li>
+        <li><a href="#">Logout</a></li>
+        <span id="onlineCount">User 0</span>
+    </nav>
+        <ul id="messages" style="display:flex; flex-direction:column; list-style:none; padding:10px;"></ul>
+        <form id="form" action="" placeholder="your message here">
+            <input id="input" autocomplete="off" /><button>Send</button>
+        </form>
+
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/main.js"></script>
+        
+</body>
+</html>
