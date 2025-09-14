@@ -2,6 +2,7 @@ const express = require("express");
 const http = require("http");
 const path = require("path");
 const passport = require('passport');
+const cors = require('cors');
 const { Strategy: JwtStrategy, ExtractJwt } = require('passport-jwt');
 require('dotenv').config();
 
@@ -32,6 +33,7 @@ passport.use(new JwtStrategy(opts, async (jwt_payload, done) => {
 }));
 
 app.use(passport.initialize());
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -49,7 +51,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/users', userRoutes);
 
-const PORT = 3000;
+const PORT = 2000;
 server.listen(PORT, () => {
   console.log(`Server is running on http://127.0.0.1:${PORT}`);
 });

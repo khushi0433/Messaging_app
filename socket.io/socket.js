@@ -17,6 +17,7 @@ io.on('connection', (socket) => {
         io.emit('user left', socket.id);
     });
 });
+    return io;
 }
 
 module.exports = initSocket;
